@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+int fillMemoSum(int **matrix , int rows ,int cols , int si , int sj)
+{
+    if(si==rows && sj==cols)
+    {
+        return matrix[rows][cols];
+    }
+    int answer=fillMemoSum(matrix , rows , cols , si+1 , sj+1);
+    int rectangleSum=matrix[si][sj]+answer;
+    //for column
+    for(int i=si+1 ; i<=rows ; i++)
+    {
+        //column remain same rows will change
+        rectangleSum    +=matrix[i][cols];
+    }
+    //for rows
+    for(int=sj+1 ;i<=cols ; i++ )
+    {
+        //rows remains same and column will change
+        rectangleSum    += matrix[rows][i];
+    }
+    matrix[si][sj]=rectangleSum;
+    return matrix[si][sj];
+}
+int maxSubRectangle(int ** matrix , int rows , int cols)
+{
+    /*int **memoSum=new int*[rows];
+    for(int i=0 ; i<rows ; i++)
+    {
+        memoSum[i]=new int[cols]();
+    }
+    */
+    int ans=fillMemoSum(matrix , rows-1 , cols-1 ,0 , 0);
+    return ans;
+}
+int main()
+{
+    int rows,cols;
+    cin>>rows>>cols;
+    int **matrix=new int*[rows];
+    for(int i=0 ; i<rows ; i++)
+    {
+        matrix[i]=new int[cols];
+        for(int j=0 ; j<cols ; j++)
+        {
+            cin>>matrix[i][j];
+        }
+    }
+    cout<<maxSubRectangle(matrix , rows , cols)<<endl;
+    for(int i=0 ; i<rows ; i++)
+    {
+        for(int j=0 ; j<cols ; j++)
+        {
+            cout>>matrix[i][j]<<"  ";
+        }cout<<endl<<endl;
+    }
+    for(int i=0 ; i<rows ; i++)
+    {
+        delete [] matrix[i];
+    }
+    delete []matrix;
+    return 0;
+}
