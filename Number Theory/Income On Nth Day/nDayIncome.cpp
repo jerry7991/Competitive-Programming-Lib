@@ -48,7 +48,7 @@ int modExpo(int a , int c)
 		a=(a*a)%(mod);
 	}
 	return ans;
-}
+}    
 int nThDayInc(int a , int b , int n)
 {
 	int c=fib(n-1);//because we need n-1th fib

@@ -50,6 +50,7 @@ int getMaxProfit(struct Actitvity *job  , int len)
 		int excluding=dp[i-1];
 		dp[i]=max(including , excluding);
 	}
+	for(int i=0;i<len;i++) cout<<dp[i]<<'\n';
 	int answer=dp[len-1];
 	return answer;
 }

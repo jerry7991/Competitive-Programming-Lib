@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "git.ignoreLimitWarning": true,
+        "files.associations": {
+            "unordered_map": "cpp"
+        }
+    }
+}

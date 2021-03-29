@@ -9,6 +9,7 @@ return _gcd(b, a % b);
 }
 int find_IS_GCD1(int *arr ,int n)
 {
+    int mod=pow(10,9)+7;
     int **dp_gcd=new int*[n];
    for(int i=0 ; i<n ; i++)
     {
@@ -20,31 +21,31 @@ int find_IS_GCD1(int *arr ,int n)
         dp_gcd[i][arr[i]]=1;
     }
     //let's store gcd
-    for(int i=1 ; i<n ; i++)
-    {
-        int new_gcd=    _gcd(arr[i-1] ,arr[i]);
-        dp_gcd[i][new_gcd]++;
-    }
+    // for(int i=1 ; i<n ; i++)
+    // {
+    //     int new_gcd=    _gcd(arr[i-1] ,arr[i]);
+    //     dp_gcd[i][new_gcd]++;
+    // }
     for(int i=0 ; i<n ; i++)
     {
         for(int k=i-1 ; k>=0 ; k--)
         {
-            if(arr[k]>arr[i])
-                continue;
+            if(arr[k]<arr[i])
+            {
             for(int g=0 ; g<100;g++)
             {
-                if(dp_gcd[k][g]!=0)
-                {
+                
                    int new_gcd= _gcd(arr[i] , g);
-                   dp_gcd[i][new_gcd]   +=dp_gcd[k][g];
-                }
+                   dp_gcd[i][new_gcd]     =   (    dp_gcd[i][new_gcd]+dp_gcd[k][g]    )%mod;
+            
+            }
             }
         }
     }
     int sq=0;
     for(int i=0 ; i<n;i++)
     {
-        sq  +=dp_gcd[i][1];
+        sq  =(sq+dp_gcd[i][1])%mod;
     }
     return sq;
 }

@@ -3,7 +3,8 @@
 using namespace std;
 void dfs(vector<int> *edge,bool *visited,int s,int v,stack<int> &fin)
 {
-    visited[s]=0;
+    // visited[s]=0;//need to mark true instead of false
+    visited[s]=1;
     for(int i=0;i<edge[s].size();i++)
     {
         int x=edge[s][i];
@@ -16,7 +17,8 @@ void dfs(vector<int> *edge,bool *visited,int s,int v,stack<int> &fin)
 }
 void dfs1(vector<int> *edgeT,bool *visited,int s,int v,unordered_set<int>*comp)
 {
-    visited[s]=0;
+    // visited[s]=0;//need to mark true instead of false
+    visited[s]=1;
     comp->insert(s);
     for(int i=0;i<edgeT[s].size();i++)
     {
@@ -46,6 +48,8 @@ unordered_set<unordered_set<int>*>* solve(vector<int> *edge,vector<int> *edgeT,i
     {
         int el=fin.top();
         fin.pop();
+        //chech el is already visited or not
+        if(visited[el]) continue;
         unordered_set<int>* comp=new unordered_set<int>();
         dfs1(edgeT,visited,el,v,comp);
         out->insert(comp);
@@ -74,7 +78,7 @@ int main()
        unordered_set<int>::iterator it2=comp->begin();
        while(it2!=comp->end())
        {
-           cout<<*it2+1<<" ";
+           cout<<*it2+1<<" ";//print +1
            it2++;
        }
        cout<<endl;

@@ -185,7 +185,7 @@ int main()
     for(int i=0 ; i<word.size() ; i++)
     {
         cout<<word[i]<<"\n";
-    }*/
+    }*/ 
    if(crossWordHelper(grid , word , 0))//initially call it with starting index of words
     {
         display(grid);

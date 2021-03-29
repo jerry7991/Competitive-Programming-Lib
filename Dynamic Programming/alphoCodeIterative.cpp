@@ -15,7 +15,7 @@ int getTotalPossibleCode(string str)
     int x=(str[i-1]-'0')*10+(str[i]-'0');
     if(str[i]!='0')
       dp[i]=dp[i-1];
-    if(x>=10 && x<=26 && i>1)
+    if(x>=10 && x<=26 && i>1) 
       dp[i]+=dp[i-2];
     else if(x>=10 && x<=26)
       dp[i]++;

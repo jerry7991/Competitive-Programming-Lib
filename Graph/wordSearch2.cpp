@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-  class Treis{
+class Treis{
 public:
 	unordered_map<char , Treis*> child;
 };
