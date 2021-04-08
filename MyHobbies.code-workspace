@@ -1,13 +1,71 @@
 {
     "folders": [
-		{
-			"path": "."
-		}
-	],
+        {
+            "path": "."
+        }
+    ],
     "settings": {
         "git.ignoreLimitWarning": true,
         "files.associations": {
-            "unordered_map": "cpp"
+            "unordered_map": "cpp",
+            "array": "cpp",
+            "*.tcc": "cpp",
+            "cctype": "cpp",
+            "cfenv": "cpp",
+            "cinttypes": "cpp",
+            "cmath": "cpp",
+            "complex": "cpp",
+            "cstdint": "cpp",
+            "cstdio": "cpp",
+            "cstdlib": "cpp",
+            "cwchar": "cpp",
+            "cwctype": "cpp",
+            "functional": "cpp",
+            "regex": "cpp",
+            "tuple": "cpp",
+            "type_traits": "cpp",
+            "utility": "cpp",
+            "atomic": "cpp",
+            "bitset": "cpp",
+            "chrono": "cpp",
+            "clocale": "cpp",
+            "condition_variable": "cpp",
+            "csetjmp": "cpp",
+            "csignal": "cpp",
+            "cstdarg": "cpp",
+            "cstddef": "cpp",
+            "cstring": "cpp",
+            "ctime": "cpp",
+            "deque": "cpp",
+            "forward_list": "cpp",
+            "list": "cpp",
+            "unordered_set": "cpp",
+            "vector": "cpp",
+            "exception": "cpp",
+            "algorithm": "cpp",
+            "ratio": "cpp",
+            "system_error": "cpp",
+            "fstream": "cpp",
+            "future": "cpp",
+            "initializer_list": "cpp",
+            "iomanip": "cpp",
+            "iosfwd": "cpp",
+            "iostream": "cpp",
+            "istream": "cpp",
+            "limits": "cpp",
+            "memory": "cpp",
+            "mutex": "cpp",
+            "new": "cpp",
+            "ostream": "cpp",
+            "numeric": "cpp",
+            "scoped_allocator": "cpp",
+            "sstream": "cpp",
+            "stdexcept": "cpp",
+            "streambuf": "cpp",
+            "thread": "cpp",
+            "typeindex": "cpp",
+            "typeinfo": "cpp",
+            "valarray": "cpp"
         }
     }
 }
