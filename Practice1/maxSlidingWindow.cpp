@@ -3,15 +3,15 @@ using namespace std;
 int getMax(vector<int>& nums, int start, int end) {
     int ans = INT_MIN;
     while (start <= end) {
-        ans = max(ans, nums[start]);
+        ans = max(ans, nums[start++]);
     }
     return ans;
 }
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     int n = nums.size();
     vector<int> out;
-    for (int i = k; i < n; i++) {
-        out.push_back(getMax(nums, i - k, k));
+    for (int i = 0; i < n - k; i++) {
+        out.push_back(getMax(nums, i, i + k - 1));
     }
     return out;
 }
