@@ -35,9 +35,9 @@ int main() {
     vector<int> nums(n);
     for (int i = 0; i < n; i++) cin >> nums[i];
 
-    auto x = (new Solution())->threeSum(nums);
-    for (auto y : x) {
-        for (auto z : y) cout << z << " ";
+    vector<vector<int>> x = (new Solution())->threeSum(nums);
+    for (vector<int> y : x) {
+        for (int z : y) cout << z << " ";
         cout << endl;
     }
 }
