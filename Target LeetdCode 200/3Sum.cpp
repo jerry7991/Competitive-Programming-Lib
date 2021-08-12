@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-   public:
+public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> trip;
         sort(nums.begin(), nums.end());

@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-   public:
+public:
     int maxCoins(vector<int>& nums) {
         int n = nums.size();
         nums.insert(nums.begin(), 1);
