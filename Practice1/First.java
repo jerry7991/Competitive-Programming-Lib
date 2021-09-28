@@ -1,6 +1,6 @@
 class First{
     public static void main(String[] args)
-      {
-          System.out.println("Hello this s anuoi");
+            {
+            System.out.println("Hello this s anuoi");
     }
 }

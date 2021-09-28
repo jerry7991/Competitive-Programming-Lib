@@ -9,7 +9,7 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     while (i < n && j < m) {
         if (nums1[i] <= nums2[j])
             nums[k++] = nums1[i++];
-        else
+           else
             nums[k++] = nums2[j++];
     }
     while (i < n) {
@@ -17,7 +17,7 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     }
     while (j < m) {
         nums[k++] = nums2[j++];
-    }
+    } 
     if ((n + m) & 1) {
         return (double)nums[(n + m) / 2];
     } else {
